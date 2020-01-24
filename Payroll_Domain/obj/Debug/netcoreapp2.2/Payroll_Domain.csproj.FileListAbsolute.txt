@@ -1,0 +1,14 @@
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Entity.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.csprojAssemblyReference.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.csproj.CoreCompileInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.AssemblyInfoInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.AssemblyInfo.cs
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Domain.deps.json
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Domain.runtimeconfig.json
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Domain.runtimeconfig.dev.json
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Domain.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Domain.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\bin\Debug\netcoreapp2.2\Payroll_Entity.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.csproj.CopyComplete
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Domain\obj\Debug\netcoreapp2.2\Payroll_Domain.pdb

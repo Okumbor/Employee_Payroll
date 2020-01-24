@@ -1,0 +1,14 @@
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Services.deps.json
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Services.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Services.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Domain.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Entity.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Domain.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Payroll_Entity.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.csprojAssemblyReference.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.csproj.CoreCompileInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.AssemblyInfoInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.AssemblyInfo.cs
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.csproj.CopyComplete
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.pdb

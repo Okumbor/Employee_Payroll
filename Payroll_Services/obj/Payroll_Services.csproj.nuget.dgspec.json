@@ -1,0 +1,193 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Services\\Payroll_Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\Payroll_Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\Payroll_Domain.csproj",
+        "projectName": "Payroll_Domain",
+        "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\Payroll_Domain.csproj",
+        "packagesPath": "C:\\Users\\okumb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\okumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj": {
+                "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj",
+        "projectName": "Payroll_Entity",
+        "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj",
+        "packagesPath": "C:\\Users\\okumb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\okumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Services\\Payroll_Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Services\\Payroll_Services.csproj",
+        "projectName": "Payroll_Services",
+        "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Services\\Payroll_Services.csproj",
+        "packagesPath": "C:\\Users\\okumb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\okumb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\Payroll_Domain.csproj": {
+                "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Domain\\Payroll_Domain.csproj"
+              },
+              "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj": {
+                "projectPath": "C:\\Users\\okumb\\source\\repos\\PayrollApp\\Payroll_Entity\\Payroll_Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

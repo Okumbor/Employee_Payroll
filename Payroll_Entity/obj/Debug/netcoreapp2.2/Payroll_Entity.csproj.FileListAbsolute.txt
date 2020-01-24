@@ -1,0 +1,9 @@
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\bin\Debug\netcoreapp2.2\Payroll_Entity.deps.json
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\bin\Debug\netcoreapp2.2\Payroll_Entity.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\bin\Debug\netcoreapp2.2\Payroll_Entity.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.csprojAssemblyReference.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.csproj.CoreCompileInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.AssemblyInfoInputs.cache
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.AssemblyInfo.cs
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Entity\obj\Debug\netcoreapp2.2\Payroll_Entity.pdb
