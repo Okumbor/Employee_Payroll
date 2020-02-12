@@ -25,6 +25,8 @@ namespace Payroll_Entity
         [Required]
         public string City { get; set; }
         [Required]
+        public string PhoneNumber { get; set; }
+        [Required]
         public string PostalCode { get; set; }
         [Required]
         public DateTime DOB { get; set; }

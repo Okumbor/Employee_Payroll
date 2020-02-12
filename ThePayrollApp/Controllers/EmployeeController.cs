@@ -1,23 +1,95 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.AspNetCore.Mvc;
+using Payroll_Entity;
 using Payroll_Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using ThePayrollApp.Models;
 
 namespace ThePayrollApp.Controllers
 {
     public class EmployeeController : Controller
     {
-            private readonly IEmployeeService _EmployeeService; 
-            public EmployeeController (IEmployeeService EmployeeService)
+            private readonly IEmployeeService _EmployeeService;
+        private readonly HostingEnvironment _hostingEnvironment;
+            public EmployeeController (IEmployeeService EmployeeService, HostingEnvironment hostingEnvironment)
             {
                 _EmployeeService = EmployeeService;
+            _hostingEnvironment = hostingEnvironment;
             }
         public IActionResult Index()
         {
-            var 
+            var employees = _EmployeeService.GetAll().Select(employee => new EmployeeIndexViewmodel
+            {
+                Id = employee.Id,
+                EmployeeNo = employee.EmpNo,
+                FullName = employee.FullName,
+                Gender = employee.Gender,
+                ImageUrl = employee.ImageUrl,
+                PostalCode = employee.PostalCode,
+                DateJoined = employee.DateJoined,
+                Designation = employee.Designation,
+                Email = employee.Email,
+                City = employee.City,
+            }).ToList();
+            return View(employees);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            var model = new EmployeeCreateViewmodel();
+            return View(model);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(EmployeeCreateViewmodel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var employee = new Employee
+                {
+                    Id = model.Id,
+                    EmpNo = model.EmpNo,
+                    FirstName = model.FirstName,
+                    MiddleName = model.MiddleName,
+                    LastName = model.LastName,
+                    FullName = model.FullName,
+                    Gender = model.Gender,
+                    Address = model.Address,
+                    City = model.City,
+                    PostalCode = model.PostalCode,
+                    PhoneNumber = model.PhoneNumber,
+                    DOB = model.DOB,
+                    DateJoined = model.DateJoined,
+                    Designation = model.Designation,
+                    Email = model.Email,
+                    NationalInsuranceNo = model.NationalInsuranceNo,
+                    PaymentMethod = model.PaymentMethod,
+                    StudentLoan = model.StudentLoan,
+                    UnionMember = model.UnionMember,
+
+                };
+                if(model.ImageUrl != null && model.ImageUrl.Length > 0)
+                {
+                    var UploadDir = @"Images/employeeDP";
+                    var Filename = Path.GetFileNameWithoutExtension(model.ImageUrl.FileName);
+                    var Extension = Path.GetExtension(model.ImageUrl.FileName);
+                    var WebRoot = _hostingEnvironment.WebRootPath;
+                    Filename = DateTime.UtcNow.ToString("yyyymmdd") + Filename + Extension;
+                    var path = Path.Combine(WebRoot, UploadDir, Filename);
+                    await model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
+                    employee.ImageUrl = "/" + UploadDir + "/" + Filename;
+                }
+                await _EmployeeService.CreateAsync(employee);
+                return RedirectToAction(nameof(Index));
+            }
             return View();
+            
         }
     }
 }
