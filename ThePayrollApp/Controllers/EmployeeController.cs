@@ -91,5 +91,137 @@ namespace ThePayrollApp.Controllers
             return View();
             
         }
+
+        public IActionResult Edit(int Id)
+        {
+            var employee = _EmployeeService.GetById(Id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            var model = new EmployeeEditViewmodel()
+            {
+                Id = employee.Id,
+                EmpNo = employee.EmpNo,
+                FirstName = employee.FirstName,
+                MiddleName = employee.MiddleName,
+                LastName = employee.LastName,
+                Gender = employee.Gender,
+                Address = employee.Address,
+                City = employee.City,
+                PostalCode = employee.PostalCode,
+                PhoneNumber = employee.PhoneNumber,
+                DOB = employee.DOB,
+                DateJoined = employee.DateJoined,
+                Designation = employee.Designation,
+                Email = employee.Email,
+                NationalInsuranceNo = employee.NationalInsuranceNo,
+                PaymentMethod = employee.PaymentMethod,
+                StudentLoan = employee.StudentLoan,
+                UnionMember = employee.UnionMember,
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(EmployeeEditViewmodel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var employee = _EmployeeService.GetById(model.Id);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                employee.EmpNo = model.EmpNo;
+                employee.FirstName = model.FirstName;
+                employee.MiddleName = model.MiddleName;
+                employee.LastName = model.LastName;
+                employee.NationalInsuranceNo = model.NationalInsuranceNo;
+                employee.PhoneNumber = model.PhoneNumber;
+                employee.Email = model.Email;
+                employee.Gender = model.Gender;
+                employee.DOB = model.DOB;
+                employee.Designation = model.Designation;
+                employee.DateJoined = model.DateJoined;
+                employee.City = model.City;
+                employee.Address = model.Address;
+                employee.PostalCode = model.PostalCode;
+                employee.PaymentMethod = model.PaymentMethod;
+                employee.StudentLoan = model.StudentLoan;
+                employee.UnionMember = model.UnionMember;
+                if (model.ImageUrl != null && model.ImageUrl.Length > 0)
+                {
+                    var UploadDir = @"Images/employeeDP";
+                    var Filename = Path.GetFileNameWithoutExtension(model.ImageUrl.FileName);
+                    var Extension = Path.GetExtension(model.ImageUrl.FileName);
+                    var WebRoot = _hostingEnvironment.WebRootPath;
+                    Filename = DateTime.UtcNow.ToString("yyyymmdd") + Filename + Extension;
+                    var path = Path.Combine(WebRoot, UploadDir, Filename);
+                    await model.ImageUrl.CopyToAsync(new FileStream(path, FileMode.Create));
+                    employee.ImageUrl = "/" + UploadDir + "/" + Filename;
+                }
+                await _EmployeeService.UpdateAsync(employee);
+                 return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
+        
+        [HttpGet]
+        public IActionResult Detail(int Id)
+        {
+            var employee = _EmployeeService.GetById(Id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            EmployeeDetailViewmodel model = new EmployeeDetailViewmodel()
+            {
+                Id = employee.Id,
+                EmpNo = employee.EmpNo,
+                FullName = employee.FullName,
+                DateJoined = employee.DateJoined,
+                PhoneNumber = employee.PhoneNumber,
+                PostalCode = employee.PostalCode,
+                Address = employee.Address,
+                City = employee.City,
+                Designation = employee.Designation,
+                DOB = employee.DOB,
+                Email = employee.Email,
+                Gender = employee.Gender,
+                ImageUrl = employee.ImageUrl,
+                NationalInsuranceNo = employee.NationalInsuranceNo,
+                PaymentMethod = employee.PaymentMethod,
+                StudentLoan = employee.StudentLoan,
+                UnionMember = employee.UnionMember,
+            };
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int Id)
+        {
+            var employee = _EmployeeService.GetById(Id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            EmployeeDeleteViewmodel model = new EmployeeDeleteViewmodel()
+            {
+                Id = employee.Id,
+                FullName = employee.FullName
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(EmployeeDeleteViewmodel model)
+        {
+            await _EmployeeService.Delete(model.Id);
+            return RedirectToAction(nameof(Index));
+        }
+        
     }
 }

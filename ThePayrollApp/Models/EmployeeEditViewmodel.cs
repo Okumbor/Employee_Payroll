@@ -19,13 +19,7 @@ namespace ThePayrollApp.Models
         public string MiddleName { get; set; }
         [Required(ErrorMessage = "Last Name is required"), StringLength(50, MinimumLength = 2), RegularExpression(@"^ [A-Z] [a-z,A-Z]$"), Display(Name = "Last Name")]
         public string LastName { get; set; }
-        public string FullName
-        {
-            get
-            {
-                return FirstName + (string.IsNullOrEmpty(MiddleName) ? " " : (" " + (char?)MiddleName[0] + ".").ToUpper()) + LastName;
-            }
-        }
+        
         [Required]
         public string Gender { get; set; }
         [Required(ErrorMessage = "Address is required"), StringLength(50)]
