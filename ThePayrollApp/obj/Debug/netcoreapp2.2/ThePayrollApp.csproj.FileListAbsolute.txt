@@ -36,3 +36,5 @@ C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\The
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\ThePayrollApp.csproj.CopyComplete
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\ThePayrollApp.dll
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\ThePayrollApp.pdb
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Pages\_ValidationScriptsPartial.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.g.cshtml.cs

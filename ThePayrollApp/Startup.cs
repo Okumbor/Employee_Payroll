@@ -13,6 +13,8 @@ using Microsoft.EntityFrameworkCore;
 using Payroll_Domain;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Payroll_Services.Implementations;
+using Payroll_Services;
 
 namespace ThePayrollApp
 {
@@ -43,6 +45,7 @@ namespace ThePayrollApp
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

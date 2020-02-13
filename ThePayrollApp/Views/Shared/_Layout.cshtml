@@ -16,10 +16,11 @@
               integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light d-flex flex-row bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThePayrollApp</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -40,18 +41,55 @@
             </div>
         </nav>
     </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="container-fluid page-body-wrapper sidebar sidebar-offcanvas">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav-item sidebar sidebar-offcanvas">
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#Employee" aria-expanded="false" aria-controls="ui-basic">
+                        <i class="fas fa-users fa-lg text-primary " style="margin-right:auto"></i>
+                        <span class="menu-title"> Employee</span>
+                        <i class="menu-arrow text-primary"></i>
+                    </a>
+                    <div class="collapse" id="Employee">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Create">New Employee</a> </li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Employee" asp-action="Index">All Employees</a> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#Payroll" aria-expanded="false" aria-controls="ui-basic">
+                        <i class="fas fa-pound-sign fa-lg text-primary " style="margin-right:auto"></i>
+                        <span class="menu-title"> Payroll</span>
+                        <i class="menu-arrow text-primary"></i>
+                    </a>
+                    <div class="collapse" id="Payroll">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"><a class="nav-link" asp-controller="Pay" asp-action="Create">New Pay</a> </li>
+                            <li class="nav-item"><a class="nav-link" asp-controller="Pay" asp-action="Index">Payment Record</a> </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <partial name="_CookieConsentPartial" />
+            <div class="tab-content">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+            </div>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2020 - ThePayrollApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - ThePayrollApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+    
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
