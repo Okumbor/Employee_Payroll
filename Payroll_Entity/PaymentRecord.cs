@@ -8,7 +8,7 @@ namespace Payroll_Entity
     {
         public int Id { get; set; }
         [ForeignKey("Employee")]
-        public int EmmployeeId { get; set; }
+        public int EmployeeId { get; set; }
         public Employee Employee { get; set; }
         [Required, MaxLength(100)]
         public string FullName { get; set; }
@@ -33,7 +33,7 @@ namespace Payroll_Entity
         [Column(TypeName = "money")]
         public decimal Tax { get; set; }
         [Column(TypeName = "money")]
-        public decimal FIRS { get; set; }
+        public decimal? FIRS { get; set; }
         [Column(TypeName = "money")]
         public decimal? UnionFee { get; set; }
         [Column(TypeName = "money")]
