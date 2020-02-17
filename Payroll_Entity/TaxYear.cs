@@ -7,6 +7,6 @@ namespace Payroll_Entity
     public class TaxYear
     {
         public int Id { get; set; }
-        public int YearofTax { get; set; }
+        public string YearofTax { get; set; }
     }
 }

@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Payroll_Services
 {
-    public interface ITaxService
+    public interface INationalInsuranceService
     {
-        decimal TaxAmount(decimal totalTax)
+        decimal NationalInsurance(decimal totalInsurance);
     }
 }
