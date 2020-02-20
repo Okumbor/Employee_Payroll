@@ -9,7 +9,8 @@
       "Payroll_Services/1.0.0": {
         "dependencies": {
           "Payroll_Domain": "1.0.0",
-          "Payroll_Entity": "1.0.0"
+          "Payroll_Entity": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0.0"
         },
         "runtime": {
           "Payroll_Services.dll": {}
@@ -876,6 +877,14 @@
         "runtime": {
           "Payroll_Entity.dll": {}
         }
+      },
+      "Microsoft.AspNetCore.Mvc.ViewFeatures/2.2.0.0": {
+        "runtime": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.0"
+          }
+        }
       }
     }
   },
@@ -1473,6 +1482,11 @@
     },
     "Payroll_Entity/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Mvc.ViewFeatures/2.2.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

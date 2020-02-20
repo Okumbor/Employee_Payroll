@@ -12,3 +12,5 @@ C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\
 C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.csproj.CopyComplete
 C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.dll
 C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\obj\Debug\netcoreapp2.2\Payroll_Services.pdb
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\okumb\source\repos\PayrollApp\Payroll_Services\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Mvc.ViewFeatures.xml

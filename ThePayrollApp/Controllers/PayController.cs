@@ -103,5 +103,76 @@ namespace ThePayrollApp.Controllers
             var allTaxYears = _paymentRecordService.GetAllTaxYear();
             return View();
         }
+
+        public IActionResult Details(int id)
+        {
+            var paymentRecord = _paymentRecordService.GetById(id);
+            if (paymentRecord == null)
+            {
+                return NotFound();
+            }
+            var model = new PaymentRecordDetailViewmodel()
+            {
+                Id = paymentRecord.Id,
+                EmployeeId = paymentRecord.EmployeeId,
+                FullName = paymentRecord.FullName,
+                Employee = paymentRecord.Employee,
+                TaxYearId = paymentRecord.TaxYearId,
+                Year = _paymentRecordService.GetTaxYearById(paymentRecord.TaxYearId).YearofTax,
+                PayDate = paymentRecord.PayDate,
+                PayMonth = paymentRecord.PayMonth,
+                HourlyRate = paymentRecord.HourlyRate,
+                I_No = paymentRecord.I_No,
+                HoursWorked = paymentRecord.HoursWorked,
+                OverTimeEarning = paymentRecord.OverTimeEarning,
+                OverTimeHours = paymentRecord.OverTimeHours,
+                ContractualEarning = paymentRecord.ContractualEarning,
+                ContractualHours = paymentRecord.ContractualHours,
+                SLC = paymentRecord.SLC,
+                TaxCode = paymentRecord.TaxCode,
+                Tax = paymentRecord.Tax,
+                UnionFee = paymentRecord.UnionFee,
+                TotalEarnings = paymentRecord.TotalEarnings,
+                TotalDeductions = paymentRecord.TotalDeductions,
+                NetPayment = paymentRecord.NetPayment
+            };
+            return View(model);
+        }
+        [HttpGet]
+        public IActionResult Payslip(int id)
+        {
+            var paymentRecord = _paymentRecordService.GetById(id);
+            if (paymentRecord == null)
+            {
+                return NotFound();
+            }
+            var model = new PaymentRecordDetailViewmodel()
+            {
+                Id = paymentRecord.Id,
+                EmployeeId = paymentRecord.EmployeeId,
+                FullName = paymentRecord.FullName,
+                Employee = paymentRecord.Employee,
+                TaxYearId = paymentRecord.TaxYearId,
+                Year = _paymentRecordService.GetTaxYearById(paymentRecord.TaxYearId).YearofTax,
+                PayDate = paymentRecord.PayDate,
+                PayMonth = paymentRecord.PayMonth,
+                HourlyRate = paymentRecord.HourlyRate,
+                I_No = paymentRecord.I_No,
+                HoursWorked = paymentRecord.HoursWorked,
+                OverTimeEarning = paymentRecord.OverTimeEarning,
+                OverTimeHours = paymentRecord.OverTimeHours,
+                ContractualEarning = paymentRecord.ContractualEarning,
+                ContractualHours = paymentRecord.ContractualHours,
+                SLC = paymentRecord.SLC,
+                TaxCode = paymentRecord.TaxCode,
+                Tax = paymentRecord.Tax,
+                UnionFee = paymentRecord.UnionFee,
+                TotalEarnings = paymentRecord.TotalEarnings,
+                TotalDeductions = paymentRecord.TotalDeductions,
+                NetPayment = paymentRecord.NetPayment
+            };
+            return View(model);
+        }
+
     }
 }

@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 
 namespace ThePayrollApp.Models
 {
-    public class PaymentRecordCreateViewmodel
+    public class PaymentRecordDetailViewmodel
     {
         public int Id { get; set; }
         public int EmployeeId { get; set; }
-        [Display(Name ="FullName")]
+        public Employee Employee { get; set; }
+        [Display(Name = "FullName")]
         public string FullName { get; set; }
+        [Display(Name = "Insurance")]
         public decimal I_No { get; set; }
-        [Display(Name = "Pay Date"), DataType(DataType.Date)]
-        public DateTime PayDate { get; set; } = DateTime.UtcNow;
+        [Display(Name = "Pay Date")]
+        public DateTime PayDate { get; set; }
         [Display(Name = "Pay Month")]
-        public string PayMonth { get; set; } = DateTime.Today.Month.ToString();
+        public string PayMonth { get; set; } 
         public int TaxYearId { get; set; }
-        public string TaxCode { get; set; } = "NGN065";
+        public string Year { get; set; }
+        public string TaxCode { get; set; } 
         [Display(Name = "Hourly Rate")]
         public decimal HourlyRate { get; set; }
         [Display(Name = "Hours Worked")]
@@ -35,10 +38,15 @@ namespace ThePayrollApp.Models
         [Display(Name = "Tax")]
         public decimal Tax { get; set; }
         public decimal? FIRS { get; set; }
+        [Display(Name = "Union Fee")]
         public decimal? UnionFee { get; set; }
+        [Display(Name = "Student Loan")]
         public decimal? SLC { get; set; }
+        [Display(Name = "Total Earnings")]
         public decimal TotalEarnings { get; set; }
+        [Display(Name = "Total Deductions")]
         public decimal TotalDeductions { get; set; }
+        [Display(Name = "NetPayment")]
         public decimal NetPayment { get; set; }
     }
 }
