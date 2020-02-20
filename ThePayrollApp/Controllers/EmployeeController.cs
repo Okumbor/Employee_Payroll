@@ -68,7 +68,7 @@ namespace ThePayrollApp.Controllers
                     DateJoined = model.DateJoined,
                     Designation = model.Designation,
                     Email = model.Email,
-                    NationalInsuranceNo = model.NationalInsuranceNo,
+                    InsuranceNo = model.InsuranceNo,
                     PaymentMethod = model.PaymentMethod,
                     StudentLoan = model.StudentLoan,
                     UnionMember = model.UnionMember,
@@ -115,7 +115,7 @@ namespace ThePayrollApp.Controllers
                 DateJoined = employee.DateJoined,
                 Designation = employee.Designation,
                 Email = employee.Email,
-                NationalInsuranceNo = employee.NationalInsuranceNo,
+                InsuranceNo = employee.InsuranceNo,
                 PaymentMethod = employee.PaymentMethod,
                 StudentLoan = employee.StudentLoan,
                 UnionMember = employee.UnionMember,
@@ -138,7 +138,7 @@ namespace ThePayrollApp.Controllers
                 employee.FirstName = model.FirstName;
                 employee.MiddleName = model.MiddleName;
                 employee.LastName = model.LastName;
-                employee.NationalInsuranceNo = model.NationalInsuranceNo;
+                employee.InsuranceNo = model.InsuranceNo;
                 employee.PhoneNumber = model.PhoneNumber;
                 employee.Email = model.Email;
                 employee.Gender = model.Gender;
@@ -191,7 +191,7 @@ namespace ThePayrollApp.Controllers
                 Email = employee.Email,
                 Gender = employee.Gender,
                 ImageUrl = employee.ImageUrl,
-                NationalInsuranceNo = employee.NationalInsuranceNo,
+                InsuranceNo = employee.InsuranceNo,
                 PaymentMethod = employee.PaymentMethod,
                 StudentLoan = employee.StudentLoan,
                 UnionMember = employee.UnionMember,

@@ -39,3 +39,6 @@ C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\The
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Create.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Delete.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Detail.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Edit.g.cshtml.cs

@@ -55,6 +55,8 @@ namespace Payroll_Services.Implementations
         public PaymentRecord GetById(int id) 
             => _context.PaymentRecords.Where(pay => pay.Id == id).FirstOrDefault();
 
+        public TaxYear GetTaxYearById(int id) => _context.TaxYears.Where(year => year.Id == id).FirstOrDefault();
+
         public decimal NetPay(decimal totalEarnings, decimal totalDeduction)
         {
             var NetPay = totalEarnings - totalDeduction;
@@ -83,8 +85,8 @@ namespace Payroll_Services.Implementations
         public decimal OvertimeRate(decimal hourlyRate) 
             => hourlyRate * 1.5m;
 
-        public decimal TotalDeduction(decimal tax, decimal nic, decimal studentLoanRepayment, decimal unionFees)
-            => tax + nic + studentLoanRepayment + unionFees;
+        public decimal TotalDeduction(decimal tax, decimal insurance, decimal studentLoanRepayment, decimal unionFees)
+            => tax + insurance + studentLoanRepayment + unionFees;
 
         public decimal TotalEarnings(decimal overtimeEarnings, decimal contractualEarnings)
             => overtimeEarnings + contractualEarnings;

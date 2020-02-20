@@ -6,6 +6,6 @@ namespace Payroll_Services
 {
     public interface ITaxService
     {
-        decimal TaxAmount(decimal totalTax)
+        decimal TaxAmount(decimal totalTax);
     }
 }

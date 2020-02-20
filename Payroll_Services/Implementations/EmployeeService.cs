@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Payroll_Domain;
 using Payroll_Entity;
 
@@ -91,6 +92,13 @@ namespace Payroll_Services.Implementations
             return fee;
         }
 
-        
+        public IEnumerable<SelectListItem> GetAllEmployeesForPayController()
+        {
+            return GetAll().Select(emp => new SelectListItem()
+            {
+                Text = emp.FullName,
+                Value = emp.Id.ToString()
+            });
+        }
     }
 }

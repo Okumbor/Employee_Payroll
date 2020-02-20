@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Payroll_Services.Implementations
 {
-    public class NationalInsuranceService : INationalInsuranceService
+    public class InsuranceService : IInsuranceService
     {
         private decimal InsuranceRate;
         private decimal InsuranceCost;
 
-        public decimal NationalInsurance(decimal totalInsurance)
+        public decimal Insurance(decimal totalInsurance)
         {
             if (totalInsurance <= 30000)
             {

@@ -12,7 +12,7 @@ namespace Payroll_Entity
         public Employee Employee { get; set; }
         [Required, MaxLength(100)]
         public string FullName { get; set; }
-        public string NINo { get; set; }
+        public decimal I_No { get; set; }
         public DateTime PayDate { get; set; }
         public string PayMonth { get; set; }
         public int TaxYearId { get; set; }

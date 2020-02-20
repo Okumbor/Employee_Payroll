@@ -43,9 +43,9 @@ namespace ThePayrollApp.Models
         public string Email { get; set; }
         [Display(Name ="Photo")]
         public IFormFile ImageUrl { get; set; }
-        [Required(ErrorMessage ="National ID No"), StringLength(50), Display(Name ="National ID No")]
+        [Required(ErrorMessage ="Insurance No"), StringLength(50), Display(Name ="National ID No")]
         [RegularExpression(@"^[0-9] {11} $")]
-        public string NationalInsuranceNo { get; set; }
+        public string InsuranceNo { get; set; }
         [Display(Name ="What Payment Method do you want")]
         public PaymentMethod PaymentMethod { get; set; }
         [Display(Name = "Are interested in Student Loan")]
