@@ -13,14 +13,15 @@
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
     </environment>
     <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 </head>
-<body>
+<body >
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light d-flex flex-row bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar  border-danger navbar-expand-sm navbar-toggleable-sm navbar-light d-flex flex-row bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThePayrollApp</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -41,10 +42,10 @@
             </div>
         </nav>
     </header>
-    <div class="container-fluid page-body-wrapper sidebar sidebar-offcanvas">
+    <div class="container-fluid bg-dark border-dark page-body-wrapper sidebar sidebar-offcanvas flex-wrap sidenav">
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <ul class="nav-item sidebar sidebar-offcanvas">
-                <li class="nav-item">
+            <ul class=" list-unstyled nav-item sidebar sidebar-offcanvas">
+                <li class=" nav-item">
                     <a class="nav-link" data-toggle="collapse" href="#Employee" aria-expanded="false" aria-controls="ui-basic">
                         <i class="fas fa-users fa-lg text-primary " style="margin-right:auto"></i>
                         <span class="menu-title"> Employee</span>
@@ -72,24 +73,22 @@
                 </li>
             </ul>
         </nav>
-        <div class="container">
-            <partial name="_CookieConsentPartial" />
-            <div class="tab-content">
+    </div>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <div class="tab-content">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
-            </div>
         </div>
-
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2020 - ThePayrollApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-            </div>
-        </footer>
-
     </div>
 
-    
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - ThePayrollApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

@@ -33,7 +33,7 @@
                                 @foreach (var item in Model)
 	                              {
                                 <tr>
-                                    <td><a asp-action="Detail" asp-route="@item.Id">@item.EmployeeNo</a></td>
+                                    <td><a href="@item.Id" >@item.EmployeeNo</a></td>
                                     <td><img alt="Image" src="@Url.Content(item.ImageUrl)"></td>
                                     <td>@item.FullName</td>
                                     <td>@item.Gender</td>

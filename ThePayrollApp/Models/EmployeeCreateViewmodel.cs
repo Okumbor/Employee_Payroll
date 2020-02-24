@@ -11,13 +11,13 @@ namespace ThePayrollApp.Models
     public class EmployeeCreateViewmodel
     {
         public int Id { get; set; }
-        [Required(ErrorMessage ="Employee Number is required"), RegularExpression(@"^[A-Z]{3,3}[0-9]{3}$")]
+        [Required(ErrorMessage ="Employee Number is required"), RegularExpression(@"^[0-9]{3}$")]
         public string EmpNo { get; set; }
-        [Required(ErrorMessage ="First Name is required"), StringLength(50, MinimumLength =2), RegularExpression(@"^ [A-Z] [a-z,A-Z]$"), Display(Name ="First Name")]
+        [Required(ErrorMessage ="First Name is required"), StringLength(50, MinimumLength = 1), Display(Name ="First Name")]
         public string FirstName { get; set; }
-        [StringLength(50, MinimumLength = 2), RegularExpression(@"^ [A-Z] [a-z,A-Z]$"), Display(Name = "Middle Name")]
+        [StringLength(50, MinimumLength = 2), Display(Name = "Middle Name")]
         public string MiddleName { get; set; }
-        [Required(ErrorMessage = "Last Name is required"), StringLength(50, MinimumLength = 2), RegularExpression(@"^ [A-Z] [a-z,A-Z]$"), Display(Name = "Last Name")]
+        [Required(ErrorMessage = "Last Name is required"), StringLength(50, MinimumLength = 2), Display(Name = "Last Name")]
         public string LastName { get; set; }
         public string FullName { get
             { return FirstName + (string.IsNullOrEmpty(MiddleName) ? " " : (" " + (char?)MiddleName[0] + ".").ToUpper()) + LastName; 
@@ -31,7 +31,7 @@ namespace ThePayrollApp.Models
         [Required(ErrorMessage ="Postal Code is required"), StringLength(50), Display(Name ="Postal Code")]
         public string PostalCode { get; set; }
         [Required(ErrorMessage ="Phone Number is required")]
-        [RegularExpression(@"^\d{4}-\d{3}-\d{4} $")]
+        [RegularExpression(@"^[0-9]{11}$")]
         public string PhoneNumber { get; set; }
         [DataType(DataType.Date), Required(ErrorMessage ="Date of Birth is Required"), Display(Name ="Date of Birth")]
         public DateTime DOB { get; set; }
@@ -43,8 +43,8 @@ namespace ThePayrollApp.Models
         public string Email { get; set; }
         [Display(Name ="Photo")]
         public IFormFile ImageUrl { get; set; }
-        [Required(ErrorMessage ="Insurance No"), StringLength(50), Display(Name ="National ID No")]
-        [RegularExpression(@"^[0-9] {11} $")]
+        [Required(ErrorMessage ="Insurance No"), StringLength(50), Display(Name ="Insurance No")]
+        [RegularExpression(@"^[0-9]{6}$")]
         public string InsuranceNo { get; set; }
         [Display(Name ="What Payment Method do you want")]
         public PaymentMethod PaymentMethod { get; set; }

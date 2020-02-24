@@ -60,8 +60,8 @@ namespace ThePayrollApp.Controllers
 
         public IActionResult Create()
         {
-            var employees = _employeeService.GetAllEmployeesForPayController();
-            var allTaxYears = _paymentRecordService.GetAllTaxYear();
+            ViewBag.employees = _employeeService.GetAllEmployeesForPayController();
+            ViewBag.allTaxYears = _paymentRecordService.GetAllTaxYear();
             var model = new PaymentRecordCreateViewmodel();
             return View(model);
         }
