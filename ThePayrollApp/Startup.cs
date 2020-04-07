@@ -66,7 +66,7 @@ namespace ThePayrollApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,UserManager<IdentityUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             if (env.IsDevelopment())
             {
@@ -85,6 +85,8 @@ namespace ThePayrollApp
             app.UseCookiePolicy();
 
             app.UseAuthentication();
+
+            DataSeedingintializer.IdentityRoleandUserSeeding(userManager, roleManager).Wait();
 
             app.UseMvc(routes =>
             {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Payroll_Entity;
 using Payroll_Services;
@@ -12,6 +13,8 @@ using ThePayrollApp.Models;
 
 namespace ThePayrollApp.Controllers
 {
+    [Authorize(Roles ="Admin,Manager")]
+    
     public class PayController : Controller
     {
         private readonly IPaymentRecordService _paymentRecordService;
@@ -58,7 +61,7 @@ namespace ThePayrollApp.Controllers
             });
             return View(paymentRecords);
         }
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Create()
         {
             ViewBag.employees = _employeeService.GetAllEmployeesForPayController();
@@ -67,8 +70,10 @@ namespace ThePayrollApp.Controllers
             return View(model);
         }
 
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Create(PaymentRecordCreateViewmodel model)
         {
             if (ModelState.IsValid)
@@ -139,7 +144,10 @@ namespace ThePayrollApp.Controllers
             };
             return View(model);
         }
+
+
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult Payslip(int id)
         {
             var paymentRecord = _paymentRecordService.GetById(id);
@@ -175,6 +183,7 @@ namespace ThePayrollApp.Controllers
             return View(model);
         }
 
+        [AllowAnonymous]
         public IActionResult GeneratePaySlipPDF(int id)
         {
             var payslip = new ActionAsPdf("Payslip", new { id = id })

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Payroll_Entity;
@@ -12,6 +13,7 @@ using ThePayrollApp.Models;
 
 namespace ThePayrollApp.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
             private readonly IEmployeeService _EmployeeService;
