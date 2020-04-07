@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Payroll_Entity;
 using Payroll_Services;
+using RotativaCore;
 using ThePayrollApp.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -172,6 +173,15 @@ namespace ThePayrollApp.Controllers
                 NetPayment = paymentRecord.NetPayment
             };
             return View(model);
+        }
+
+        public IActionResult GeneratePaySlipPDF(int id)
+        {
+            var payslip = new ActionAsPdf("Payslip", new { id = id })
+            {
+                FileName = "PaySlip.pdf"
+            };
+            return payslip;
         }
 
     }

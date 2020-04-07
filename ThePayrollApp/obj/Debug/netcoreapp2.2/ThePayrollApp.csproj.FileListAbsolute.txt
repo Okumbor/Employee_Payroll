@@ -45,3 +45,5 @@ C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Raz
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Create.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Index.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Details.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\bin\Debug\netcoreapp2.2\WkHtmltoPdf\wkhtmltoimage.exe
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\bin\Debug\netcoreapp2.2\WkHtmltoPdf\wkhtmltopdf.exe

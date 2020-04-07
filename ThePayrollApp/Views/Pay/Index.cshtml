@@ -33,7 +33,7 @@
                                     @foreach (var item in Model)
                                     {
                                     <tr>
-                                        <td><a asp-action="Detail" asp-route="@item.Id">@item.FullName</a></td>
+                                        <td><a asp-action="Detail" asp-route-id="@item.Id">@item.FullName</a></td>
                                         <td>@item.PayDate</td>
                                         <td>@item.PayMonth</td>
                                         <td>@item.Year</td>
@@ -42,12 +42,12 @@
                                         <td>@item.NetPayment.ToString("c")</td>
                                         
                                         <td>
-                                            <a class="text-success" asp-action="Payslip" asp-route="@item.Id">
+                                            <a class="text-success" asp-action="Payslip" asp-route-id="@item.Id">
                                                 <i class="fas fa-bars"></i>Preview Payslip
                                             </a>
                                         </td>
                                         <td>
-                                            <a class="text-danger" asp-action="Print" asp-route="@item.Id">
+                                            <a class="text-danger" asp-action="GeneratePaySlipPDF" asp-route-id="@item.Id">
                                                 <i class="fas fa-file-pdf"></i>Payslip PDF 
                                             </a>
                                         </td>
