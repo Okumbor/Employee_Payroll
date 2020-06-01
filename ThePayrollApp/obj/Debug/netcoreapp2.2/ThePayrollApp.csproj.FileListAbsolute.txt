@@ -80,3 +80,4 @@ C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Raz
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Error.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.g.cshtml.cs
 C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.g.cshtml.cs
+C:\Users\okumb\source\repos\PayrollApp\ThePayrollApp\obj\Debug\netcoreapp2.2\Razor\Views\Pay\Payslip.g.cshtml.cs
